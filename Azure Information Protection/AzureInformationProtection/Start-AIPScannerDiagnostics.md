@@ -35,7 +35,7 @@ Diagnostic checks include whether:
 ### Example 1: Starts the diagnostic tool for a locally installed AIP scanner
 ```powershell
 PS C:\> $scanner_account_creds= Get-Credential
-PS C:\> Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds
+PS C:\> Start-AIPScannerDiagnostics -OnBehalfOf $scanner_account_creds
 ```
 
 This example prompts you to enter credentials for a specific account, and then provide the credentials of the service account used to run the AIP scanner service.
@@ -43,7 +43,7 @@ This example prompts you to enter credentials for a specific account, and then p
 ### Example 2: Starts the diagnostic tool with a large number of errors printed from the scanner log
 ```powershell
 PS C:\> $scanner_account_creds= Get-Credential
-PS C:\> Start-AIPScannerDiagnostics -onbehalf $scanner_account_creds -Verbose -VerboseErrorCount 30
+PS C:\> Start-AIPScannerDiagnostics -OnBehalfOf $scanner_account_creds -Verbose -VerboseErrorCount 30
 ```
 
 This example prompts you to enter credentials for a specific account, and then provide the credentials of the service account used to run the AIP scanner service. The last 30 errors are printed from the scanner log.
